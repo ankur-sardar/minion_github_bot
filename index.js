@@ -51,6 +51,7 @@ module.exports = robot => {
   //   // return context.github.issues.createComment(issueComment)    
   // })
   robot.on(`issues.opened`, createNewBranch)
+  robot.on(`issues.assigned`, createNewBranch)
 
   command(robot, 'label', (context, command) => {
     robot.log('Adding New label')
